@@ -111,7 +111,7 @@ public class VarastoTest {
     public void tulostuOikein() {
         varasto.lisaaVarastoon(4);
         assertEquals("saldo = " + varasto.getSaldo() + ", vielä tilaa " + varasto.paljonkoMahtuu(), varasto.toString());
-    }
+    }  
     
     @Test
     public void konstr() {
