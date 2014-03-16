@@ -106,7 +106,13 @@ public class VarastoTest {
         double maara = varasto.otaVarastosta(-2);
         assertEquals(0, maara, vertailuTarkkuus);
     }
-
+    
+    @Test
+    public void tulostuOikein() {
+        varasto.lisaaVarastoon(4);
+        assertEquals("saldo = " + varasto.getSaldo() + ", vielä tilaa " + varasto.paljonkoMahtuu(), varasto.toString());
+    }
+    
     @Test
     public void konstr() {
         varasto = new Varasto(-1);
